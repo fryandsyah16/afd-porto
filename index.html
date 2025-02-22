@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Achmad Fryansyah Dwiardi</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/teacher.png" />
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-iF6vbQ+3ay5FElZp5C+eK1gNVV7Wp5aX2+BMMGm8u62fexSbJtEX35BYqum2C8XbKEuVYSuBJNGIVoM7BFKD+A==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Java Script -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react-typewriter@4.0.0/dist/react-typewriter.min.js"></script>
+    <!-- GSAP library -->
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <!-- ScrollTrigger plugin -->
+    <script src="https://unpkg.com/scrolltrigger@1.0.5/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container px-5">
+                <a class="navbar-brand" href="home.html">Achmad Fryansyah Dwiardi</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="porto.html">Portofolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sertifikat.html">Certificate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- About Section-->
+        <section class="py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-xxl-8 mt-5 py-5">
+                        <div class="text-center my-5 mt-5 py-5">
+                            <h2 class="display-5 fw-bolder slider-container"><span class="text-gradient d-inline slider-track">WELCOME TO MY PORTOFOLIO
+                                    SITE</span></h2>
+                            <div class="mt-5">
+                                <button type="button" id="nextButton">Next Slide</button>
+                                <script>
+                                // Temukan tombol berdasarkan ID
+                                var collaborateButton = document.getElementById('nextButton');
+                                // Tambahkan event listener untuk menangkap klik tombol
+                                collaborateButton.addEventListener('click', function()
+                                {
+                                    // Redirect ke halaman contact.html
+                                    window.location.href = 'home.html';
+                                });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="small m-0">Achmad Fryansyah Dwiardi&copy; Portofolio 2024</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="js/gsap.js"></script>
+</body>
+
+</html>

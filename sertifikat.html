@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Certificate</title>
+    <link rel="icon" type="image/x-icon" href="assets/teacher.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+    .certificate-card
+    {
+        width: 300px;
+        margin: auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .certificate-card img
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .details
+    {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .modal
+    {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content
+    {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    .close
+    {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus
+    {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container px-5">
+            <a class="navbar-brand" href="home.html">Achmad Fryansyah Dwiardi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="porto.html">Portofolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sertifikat.html">Certificate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-shrink-0">
+        <div class="container">
+            <h1 class="title fw-bold text-center mt-5" style="font: size 2.5rem;">My Certificates</h1>
+            <p class="description text-center mt-3 mb-5" style="font: size 2.5rem;"> Here are some of my latest certificates </p>
+            <div class="certificate">
+                <div class="certificate-card mb-4">
+                    <img src="assets/EF Set.png" alt="Certificate 1" />
+                    <div class="details">
+                        <h3>Certificate EF Set</h3>
+                        <p>Issued by: English First</p>
+                        <a href="javascript:void(0);" onclick="showModal('assets/EF SET Certificate.pdf')">View Certificate</a>
+                    </div>
+                </div>
+                <div class="certificate-card mb-4">
+                    <img src="assets/Administrasi.png" alt="Certificate 2" />
+                    <div class="details">
+                        <h3>Certificate Office Administration</h3>
+                        <p>Issued by: LPKP Albar College</p>
+                        <a href="javascript:void(0);" onclick="showModal('assets/Sertifikat MICROSOFT OFFICE UNTUK ADMINISTRASI PERKANTORAN.pdf')">View
+                            Certificate</a>
+                    </div>
+                </div>
+                <div class="certificate-card mb-4">
+                    <img src="assets/sertifumj.png" alt="Certificate 3" />
+                    <div class="details">
+                        <h3>Certificate Website Portofolio</h3>
+                        <p>Issued by: Teknik Informatika FT-UMJ</p>
+                        <a href="javascript:void(0);" onclick="showModal('assets/WebPorto.pdf')">View Certificate</a>
+                    </div>
+                </div>
+                <div class="certificate-card mb-4">
+                    <img src="assets/GOVOKASI.png" alt="Certificate 4" />
+                    <div class="details">
+                        <h3>Certificate Project Based Internship</h3>
+                        <p>Issued by: GOVOKASI</p>
+                        <a href="javascript:void(0);" onclick="showModal('assets/GOVOKASI_PBI_Achmad Fryansyah Dwiardi.pdf')">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 justify-content-center">
+                <div class="col justify-content-center text-end">
+                    <button type="button" id="backButton" class="custom-button">BACK</button>
+                </div>
+                <div class="col justify-content-center text-start">
+                    <button type="button" id="nextButton" class="custom-button">NEXT</button>
+                </div>
+            </div>
+            <script>
+            document.addEventListener("DOMContentLoaded", function()
+            {
+                var backButton = document.getElementById("backButton");
+                var nextButton = document.getElementById("nextButton");
+                backButton.addEventListener("click", function()
+                {
+                    // Redirect ke halaman sebelumnya  
+                    window.history.back();
+                });
+                nextButton.addEventListener("click", function()
+                {
+                    // Redirect ke halaman berikutnya  
+                    window.location.href = "contact.html";
+                });
+            });
+            </script>
+        </div>
+    </main>
+    <!-- Modal -->
+    <div id="certificateModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="certificateEmbed" src="" width="100%" height="400px" style="border: none"></iframe>
+        </div>
+    </div>
+    <script>
+    function showModal(pdfFile)
+    {
+        document.getElementById("certificateEmbed").src = pdfFile;
+        document.getElementById("certificateModal").style.display = "block";
+    }
+
+    function closeModal()
+    {
+        document.getElementById("certificateModal").style.display = "none";
+        document.getElementById("certificateEmbed").src = ""; // Menghapus sumber untuk menghindari memuat ulang  
+    }
+
+    // Menutup modal ketika mengklik di luar modal  
+    document.getElementById("certificateModal").onclick = function(event)
+    {
+        if(event.target === this)
+        {
+            closeModal();
+        }
+    };
+    </script>
+    <!-- Bootstrap core JS (pastikan Anda menyertakan Bootstrap JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+</body>
+
+</html>
